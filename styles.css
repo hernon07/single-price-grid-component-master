@@ -1,0 +1,156 @@
+/*Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+/*RESET*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*Body Styles*/
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e6eff5;
+  font-family: "Karla", sans-serif;
+  display: grid;
+  place-content: center;
+}
+
+/*Card Styles*/
+
+.card {
+  width: 635px;
+  height: 475px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/*Top section styles*/
+
+.top-section {
+  grid-column: span 2;
+  background-color: #ffffff;
+  padding: 50px 50px 0 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.top-section h1 {
+  font-size: 24px;
+  color: #2ab3b1;
+  padding-bottom: 10px;
+}
+.top-section .green {
+  font-size: 18px;
+  color: #c0df33;
+  padding-bottom: 10px;
+}
+
+.top-section p {
+  font-size: 16px;
+  color: #9aa7be;
+  line-height: 26px;
+}
+
+/*Bottom left section styles*/
+
+.bottom-left-section {
+  background-color: #2ab3b1;
+  border-bottom-left-radius: 15px;
+  color: #ffffff;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+
+.bottom-left-section h2 {
+  font-size: 18px;
+}
+.bottom-left-section p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+.bottom-left-section p span {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.bottom-left-section button {
+  background-color: #c0df33;
+  width: 237px;
+  height: 48px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+/*Bottom right section styles*/
+
+.bottom-right-section {
+  background-color: #2ab3b1ce;
+  border-bottom-right-radius: 15px;
+  color: #ffffff;
+  display: grid;
+  place-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.bottom-right-section h2 {
+  font-size: 18px;
+}
+.bottom-right-section p {
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 238px;
+  height: 140px;
+}
+
+/*Mobile styles*/
+
+@media (max-width: 800px) {
+  body {
+    height: 150vh;
+    overflow-x: hidden;
+  }
+
+  .card {
+    width: 311px;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .top-section {
+    grid-row: 1;
+    padding: 20px;
+  }
+
+  .top-section h1 {
+    font-size: 20px;
+  }
+
+  .top-section .green {
+    font: 16px;
+  }
+
+  .bottom-left-section {
+    border-bottom-left-radius: 0;
+    grid-row: 2;
+  }
+
+  .bottom-right-section {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    grid-row: 3;
+  }
+}
